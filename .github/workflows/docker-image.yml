@@ -34,7 +34,7 @@ jobs:
       - name: Build rocketmq image and push
         uses: docker/build-push-action@v2
         with:
-          path: base
+          file: base/Dockerfile
           push: true
           platforms: linux/amd64, linux/arm64
 
@@ -45,7 +45,7 @@ jobs:
       - name: Build rocketmq dashboard image and push
         uses: docker/build-push-action@v2
         with:
-          path: dashboard
+          file: dashboard/Dockerfile
           push: true
           platforms: linux/amd64, linux/arm64
 
