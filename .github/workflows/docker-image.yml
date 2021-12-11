@@ -37,7 +37,7 @@ jobs:
           file: base/Dockerfile
           push: true
           platforms: linux/amd64, linux/arm64
-
+          context: base
           tags: |
             abcdelf/rocketmq:latest
             abcdelf/rocketmq:4.9.2
@@ -48,7 +48,7 @@ jobs:
           file: dashboard/Dockerfile
           push: true
           platforms: linux/amd64, linux/arm64
-
+          context: dashboard
           tags: |
             abcdelf/rocketmq-dashboard:latest
             abcdelf/rocketmq-dashboard:1.0.0
